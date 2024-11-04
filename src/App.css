@@ -1,0 +1,225 @@
+@import url('https://fonts.googleapis.com/css2?family=ABeeZee:ital@0;1&display=swap');
+
+
+::-webkit-scrollbar {
+  display: none;
+}
+#hero_section {
+  position: relative !important;
+}
+#particles canvas {
+  /* z-index: -1; */
+  height: 100% !important;
+  width: 100% !important;
+  position: absolute !important;
+}
+
+
+body {
+  font-family: "ABeeZee", sans-serif;
+  height: 100vh;
+  width: 100%;
+  background-color: #efefef;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.bento {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  box-sizing: border-box;
+  overflow: scroll;
+}
+
+.box {
+  background-color: rgba(255,255,255,0.1);
+  width: 100%;
+  height: 100%;
+  border-radius: 1.5rem;
+  padding: 1rem;
+  box-sizing: border-box;
+  backdrop-filter: blur(10px);
+}
+
+#profile-info {
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+
+#skills {
+  grid-row-start: 1;
+  grid-row-end: 1;
+  grid-column-start: 4; 
+  grid-column-end: 5;
+}
+
+#projects {
+  grid-row-start: 1;
+  grid-row-end: 3;
+  grid-column-start: 5;
+  grid-column-end: 8;
+  gap: 2rem;
+}
+
+#experience {
+  grid-row-start: 2;
+  grid-row-end: 4;
+  grid-column-start: 1;
+  grid-column-end: 4;
+}
+
+#instaLogo {
+  grid-row-start: 3;
+  grid-row-end: 4;
+  grid-column-start: 5;
+  grid-column-end: 6;
+}
+
+
+/* Media Queries for Mobile Responsiveness */
+
+@media (max-width: 767px) {
+  .bento {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(6, 1fr);
+  }
+
+  #profile-info {
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+
+  #skills {
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+
+  #projects {
+    grid-row-start: 3;
+    grid-row-end: 4;
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+
+  #experience {
+    grid-row-start: 4;
+    grid-row-end: 5;
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+
+  #instaLogo {
+    grid-row-start: 5;
+    grid-row-end: 6;
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    height: 100vh;
+  }
+
+  .bento {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(9, 1fr);
+  }
+
+  #profile-info, #skills, #projects, #experience, #instaLogo {
+    grid-column-start: 1;
+    grid-column-end: 2;
+  }
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 15px;
+  width: 300px;
+  height: 100px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 14px;
+}
+.content::before {
+  content: "";
+  position: absolute;
+  left: 0%;
+  top: 50%;
+  transform: translateY(-50%);
+  bottom: 0;
+  width: 40px;
+  height: 96px;
+  z-index: 2;
+  border-radius: 10px 0 0 10px;
+}
+.content::after {
+  content: "";
+  position: absolute;
+  right: 0%;
+  top: 50%;
+  transform: translateY(-50%);
+  bottom: 0;
+  width: 40px;
+  height: 96px;
+  z-index: 9;
+  border-radius: 0 10px 10px 0;
+}
+.basic-marquee {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+}
+.basic-marquee .button {
+  transition: all 0.3s ease;
+}
+.basic-marquee .button:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+.basic-marquee-1 {
+  animation: marquee 10s linear infinite;
+}
+
+.benefits {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 15px;
+  min-width: 900px;
+  height: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  position: absolute;
+}
+@keyframes marquee {
+  0% {
+    transform: translateX(-10%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.basic-marquee svg {
+  width: 40px;
+}
+.basic-marquee button {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

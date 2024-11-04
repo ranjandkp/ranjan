@@ -1,0 +1,93 @@
+.Letter {
+  background-color: #f0f0f0;
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.page {
+  display: none;
+  /* text-align: center; */
+  background: rgba(255, 255, 255, 0.9);
+  padding: 14px;
+  border-radius: 15px;
+  width: 100%;
+  max-width: 900px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  overflow: scroll;
+  margin-bottom: 5px;
+}
+
+.page.active {
+  display: block;
+}
+
+h1,
+h2 {
+  margin-bottom: 20px;
+}
+
+button {
+  padding: 10px 15px;
+  font-size: 1.2rem;
+  background-color: #e91e63;
+  color: white;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #d81b60;
+}
+
+.start-btn,
+.home-btn {
+  margin-top: 30px;
+}
+
+.password-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.password-grid button {
+  background-color: #cb9df0;
+  color: white;
+  font-size: 1.5rem;
+}
+
+.password-display {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  height: 40px;
+}
+
+.pictures img {
+  width: 100px;
+  margin: 10px;
+}
+
+.choices {
+  display: flex;
+  justify-content: space-around;
+}
+
+.choice {
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.choice img {
+  width: 80px;
+}
+
+.choice:hover {
+  transform: scale(1.1);
+}
