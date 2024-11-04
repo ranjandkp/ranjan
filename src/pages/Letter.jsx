@@ -6,7 +6,7 @@ import tImg from "../assets/t.gif";
 const Letter = () => {
   const [currentPage, setCurrentPage] = useState("intro");
   const [currentPassword, setCurrentPassword] = useState("");
-  const correctPassword = "143";
+  const correctPassword = "2823";
 
   const goToPasswordPage = () => setCurrentPage("password");
   // const goToHomePage = () => setCurrentPage("home");
@@ -45,7 +45,7 @@ const Letter = () => {
       {currentPage === "intro" && (
         <div className="page active w-[400px]" id="introPage">
           <img src={tImg} alt="" className="" />
-          <h1 className="border">
+          <h1 className="">
             Hi, I am contacting you for the last time, I swear. Please, at least
             consider me worthy enough to read what I wanted to say.
             <br />
@@ -105,7 +105,7 @@ const Letter = () => {
             <br />
             <p>
               It’s just that, first of all, I swore I would not get involved
-              with another woman.(coz i can't feel same for any other human being){" "}
+              with another woman.{" "}
             </p>
             <br />
             <p>
@@ -159,7 +159,7 @@ const Letter = () => {
             <br />
             <p>
               And all this I’m doing for the sake of one minute of your company,
-              for your laugh, your voice, your eyes, hair, lips, body, and above
+              for your laugh, your voice, your eyes, hair, lips and above
               all for your sweet, ever-surprising mind which is an enchanting
               quarry in which it is my privilege to delve.
             </p>
